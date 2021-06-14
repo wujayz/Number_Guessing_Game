@@ -11,13 +11,7 @@ import random
 def start_game():
     """Psuedo-code Hints
     
-    1. mention existing high-score when restarting
-            "Here we go again! Try to beat ____"
-    2. if high score gets beaten, congratulate! 
- 
-
-
-    
+       
     """
     # write your code inside this function.
     player_name = input("Welcome to the number guessing game! \nWhat's your name?  ")
@@ -50,14 +44,15 @@ def start_game():
           break
     print("Got it! It took you {} tries! ".format(tries))
 
+       
+
     restart = input("The game has finished. Would you like to start again? (yes/no) ")
     if restart.lower() == "yes":
+      print("Here we go again {}. See if you can break your high score of {} tries!".format(player_name, tries))
       start_game()
     else:
       print("Thank you for playing. Come again. ")
           
-
-
 
 # Kick off the program by calling the start_game function.
 start_game()
