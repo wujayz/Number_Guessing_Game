@@ -11,19 +11,16 @@ import random
 def start_game():
     """Psuedo-code Hints
     
-    When the program starts, we want to:
-    ------------------------------------
-    1. Display an intro/welcome message to the player.
-    2. Store a random number as the answer/solution.
-    3. Continuously prompt the player for a guess.
-      a. If the guess greater than the solution, display to the player "It's lower".
-      b. If the guess is less than the solution, display to the player "It's higher".
+    1. Make sure no errors happen (non-number guesses)
+    2. Errors for numbers out of the range 
+    3. Add Restart option at end of game: would you like to play again?
+    - if no: show a closing message
+    - if yes: "Here we go again! Try to beat ____"
+    4. Show Current Score when playing again
+    ---> if high score gets beaten: congratulate
+    5. random number has to get updated everytime. 
+
     
-    4. Once the guess is correct, stop looping, inform the user they "Got it"
-         and show how many attempts it took them to get the correct number.
-    5. Let the player know the game is ending, or something that indicates the game is over.
-    
-    ( You can add more features/enhancements if you'd like to. )
     """
     # write your code inside this function.
     player_name = input("Welcome to the number guessing game! \nWhat's your name?  ")
@@ -48,7 +45,7 @@ def start_game():
         break
     
     print("Got it! It took you {} tries! ".format(trys))
-    
+
 
 
 # Kick off the program by calling the start_game function.
